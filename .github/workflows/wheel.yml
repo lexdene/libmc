@@ -19,7 +19,7 @@ jobs:
 
     - name: Build wheels
       env:
-        CIBW_BEFORE_BUILD: pip install 'setuptools<72.2.0 ; implementation_name == "pypy"'
+        # CIBW_BEFORE_BUILD: pip install 'setuptools<72.2.0 ; implementation_name == "pypy"'
         MACOSX_DEPLOYMENT_TARGET: "10.13"
         CIBW_SKIP: "pp*-macosx_*"
       run: python -m cibuildwheel --output-dir wheelhouse
